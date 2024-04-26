@@ -1,4 +1,4 @@
-import 'package:coffee/screens/splash_screen.dart';
+import 'package:coffee/screens/item_details.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SplashScreen(),
+      home: const ItemDetails(),
     );
   }
 }

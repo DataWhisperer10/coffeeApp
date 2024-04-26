@@ -1,4 +1,6 @@
+import 'package:coffee/screens/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
@@ -10,29 +12,90 @@ class OnBoardingScreen extends StatefulWidget {
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: Column(
-        children: [
-          Stack(
-            fit: StackFit.expand,
-            children: [
-              SizedBox(
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        child: Stack(
+          fit: StackFit.expand,
+          children: [
+            Container(
+              height: double.infinity,
+              width: double.infinity,
+              child: Image.asset(
+                "assets/bgimage.png",
                 height: double.infinity,
                 width: double.infinity,
-                child: Image.asset(
-                  "assets/bgimage.png",
-                  height: double.infinity,
-                  width: double.infinity,
-                  fit: BoxFit.cover,
+                fit: BoxFit.fill,
+              ),
+            ),
+            Positioned(
+              bottom: 10,
+              left: 30,
+              right: 30,
+              child: Container(
+                width: MediaQuery.of(context).size.width / 6,
+                height: MediaQuery.of(context).size.height / 3.3,
+                decoration: const BoxDecoration(color: Colors.black),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Text(
+                      textAlign: TextAlign.center,
+                      "Coffee so good,  your taste buds will love it.",
+                      style: GoogleFonts.sora(
+                          fontSize: 32, //AppSizing.screenSizeonHeight(34),
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    ),
+                    const SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      textAlign: TextAlign.center,
+                      "The best grain, the finest roast, the powerful flavor.",
+                      style: TextStyle(
+                          backgroundColor: Colors.black,
+                          fontSize: 14, //AppSizing.screenSizeonHeight(14),
+                          color: Colors.grey.shade200),
+                    ),
+                    const SizedBox(
+                      height: 18,
+                    ),
+                    TextButton(
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: ((context) => const HomeScreen()),
+                            ),
+                          );
+                        },
+                        child: Container(
+                          height: 40,
+                          width: 315,
+                          // margin: EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                              color: Colors.brown,
+                              borderRadius: BorderRadius.circular(16)),
+                          child: Center(
+                            child: Text(
+                              "Get Started",
+                              style: GoogleFonts.sora(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w800,
+                                  color: Colors.white),
+                            ),
+                          ),
+                        ))
+                  ],
                 ),
               ),
-              const Text(
-                "Coffee so good, your taste buds will love it.",
-                style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
-              )
-            ],
-          ),
-        ],
+            ),
+          ],
+        ),
       ),
     );
   }
