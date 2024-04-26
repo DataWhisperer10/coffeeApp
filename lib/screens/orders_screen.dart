@@ -38,172 +38,178 @@ class _OrdersScreenState extends State<OrdersScreen> {
                 ))
           ],
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Container(
-                  height: 40,
-                  width: 155,
-                  decoration: BoxDecoration(
-                    color: Colors.brown,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  margin: EdgeInsets.only(left: 40),
-                  child: Center(
-                    child: Text(
-                      "Deliver",
-                      style: GoogleFonts.sora(
-                          fontWeight: FontWeight.w600,
-                          backgroundColor: Colors.brown,
-                          color: Colors.white,
-                          fontSize: 16),
-                    ),
-                  ),
-                ),
-                Container(
-                  height: 40,
-                  width: 155,
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  margin: EdgeInsets.only(right: 20),
-                  child: Center(
-                    child: Text(
-                      "Pick Up",
-                      style: GoogleFonts.sora(
-                          fontWeight: FontWeight.w600,
-                          color: Colors.white,
-                          fontSize: 16),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 24,
-            ),
-            Text(
-              "Delivery Address",
-              style:
-                  GoogleFonts.sora(fontWeight: FontWeight.w600, fontSize: 16),
-            ),
-            Text(
-              "Jaipur, Rajasthan, Bharat",
-              style:
-                  GoogleFonts.sora(fontWeight: FontWeight.w600, fontSize: 14),
-            ),
-            Text(
-              "#-234, Palm Residency, Malviya Nagar, Jaipur",
-              style: GoogleFonts.sora(fontSize: 12, color: Colors.grey),
-            ),
-            const SizedBox(
-              height: 16,
-            ),
-            Row(
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16),
-                      border: Border.all()),
-                  height: 27,
-                  width: 120,
-                  child: Center(
-                    child: Text(
-                      "Edit Address",
-                      style: GoogleFonts.sora(fontSize: 12, color: Colors.grey),
-                    ),
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16),
-                      border: Border.all()),
-                  height: 27,
-                  width: 120,
-                  child: Center(
-                    child: Text(
-                      "Add Note",
-                      style: GoogleFonts.sora(fontSize: 12, color: Colors.grey),
-                    ),
-                  ),
-                )
-              ],
-            ),
-            const SizedBox(
-              height: 40,
-            ),
-            Material(
-              elevation: 7,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      child: Row(
-                        children: [
-                          Image.asset(
-                            "assets/iconimage.png",
-                            height: 54,
-                            width: 54,
-                          ),
-                          const SizedBox(
-                            width: 12,
-                          ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Cappucino",
-                                style: GoogleFonts.sora(
-                                    fontSize: 16, fontWeight: FontWeight.w600),
-                              ),
-                              Text(
-                                "with Chocolate",
-                                style: GoogleFonts.sora(
-                                    color: Colors.grey, fontSize: 12),
-                              )
-                            ],
-                          ),
-                        ],
+                  Container(
+                    height: 40,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      color: Colors.brown,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    margin: const EdgeInsets.only(left: 20),
+                    child: Center(
+                      child: Text(
+                        "Deliver",
+                        style: GoogleFonts.sora(
+                            fontWeight: FontWeight.w600,
+                            backgroundColor: Colors.brown,
+                            color: Colors.white,
+                            fontSize: 16),
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    width: 66,
+                  Container(
+                    height: 40,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      color: Colors.grey,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    margin: EdgeInsets.only(right: 20),
+                    child: Center(
+                      child: Text(
+                        "Pick Up",
+                        style: GoogleFonts.sora(
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white,
+                            fontSize: 16),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 24,
+              ),
+              Text(
+                "Delivery Address",
+                style:
+                    GoogleFonts.sora(fontWeight: FontWeight.w600, fontSize: 16),
+              ),
+              Text(
+                "Jaipur, Rajasthan, Bharat",
+                style:
+                    GoogleFonts.sora(fontWeight: FontWeight.w600, fontSize: 14),
+              ),
+              Text(
+                "#-234, Palm Residency, Malviya Nagar, Jaipur",
+                style: GoogleFonts.sora(fontSize: 12, color: Colors.grey),
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              Row(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(16),
+                        border: Border.all()),
+                    height: 27,
+                    width: 120,
+                    child: Center(
+                      child: Text(
+                        "Edit Address",
+                        style:
+                            GoogleFonts.sora(fontSize: 12, color: Colors.grey),
+                      ),
+                    ),
                   ),
                   Container(
-                    child: Row(
-                      children: [
-                        IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.remove_circle_rounded,
-                              color: Colors.brown,
-                            )),
-                        Text(
-                          ("1"),
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                        IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.add_circle_rounded,
-                              color: Colors.brown,
-                            )),
-                      ],
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(16),
+                        border: Border.all()),
+                    height: 27,
+                    width: 120,
+                    child: Center(
+                      child: Text(
+                        "Add Note",
+                        style:
+                            GoogleFonts.sora(fontSize: 12, color: Colors.grey),
+                      ),
                     ),
                   )
                 ],
               ),
-            )
-          ],
+              const SizedBox(
+                height: 40,
+              ),
+              Material(
+                elevation: 7,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              "assets/iconimage.png",
+                              height: 54,
+                              width: 54,
+                            ),
+                            const SizedBox(
+                              width: 12,
+                            ),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Cappucino",
+                                  style: GoogleFonts.sora(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w600),
+                                ),
+                                Text(
+                                  "with Chocolate",
+                                  style: GoogleFonts.sora(
+                                      color: Colors.grey, fontSize: 12),
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 46,
+                    ),
+                    Container(
+                      child: Row(
+                        children: [
+                          IconButton(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.remove_circle_rounded,
+                                color: Colors.brown,
+                              )),
+                          Text(
+                            ("1"),
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          IconButton(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.add_circle_rounded,
+                                color: Colors.brown,
+                              )),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

@@ -228,7 +228,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                       style: ButtonStyle(
                         padding: MaterialStateProperty.all(
                           EdgeInsets.symmetric(
-                              vertical: 30.0, horizontal: 64.0),
+                              vertical: 20.0, horizontal: 54.0),
                         ),
                         backgroundColor: MaterialStateProperty.all<Color>(
                             const Color.fromARGB(255, 177, 119, 98)),

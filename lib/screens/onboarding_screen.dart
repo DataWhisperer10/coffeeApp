@@ -1,4 +1,4 @@
-import 'package:coffee/screens/home_screen.dart';
+import 'package:coffee/screens/item_details.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -46,7 +46,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       textAlign: TextAlign.center,
                       "Coffee so good,  your taste buds will love it.",
                       style: GoogleFonts.sora(
-                          fontSize: 32, //AppSizing.screenSizeonHeight(34),
+                          fontSize: 22, //AppSizing.screenSizeonHeight(34),
                           fontWeight: FontWeight.bold,
                           color: Colors.white),
                     ),
@@ -62,14 +62,14 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                           color: Colors.grey.shade200),
                     ),
                     const SizedBox(
-                      height: 18,
+                      height: 10,
                     ),
                     TextButton(
                         onPressed: () {
                           Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                              builder: ((context) => const HomeScreen()),
+                              builder: ((context) => const ItemDetails()),
                             ),
                           );
                         },
