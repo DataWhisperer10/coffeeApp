@@ -1,4 +1,4 @@
-import 'package:coffee/screens/order_screen.dart';
+import 'package:coffee/screens/orders_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -239,7 +239,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const OrderScreen()));
+                                builder: (context) => const OrdersScreen()));
                       },
                       child: Text(
                         "Buy Now",
