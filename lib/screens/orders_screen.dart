@@ -133,6 +133,75 @@ class _OrdersScreenState extends State<OrdersScreen> {
                   ),
                 )
               ],
+            ),
+            const SizedBox(
+              height: 40,
+            ),
+            Material(
+              elevation: 7,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            "assets/iconimage.png",
+                            height: 54,
+                            width: 54,
+                          ),
+                          const SizedBox(
+                            width: 12,
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Cappucino",
+                                style: GoogleFonts.sora(
+                                    fontSize: 16, fontWeight: FontWeight.w600),
+                              ),
+                              Text(
+                                "with Chocolate",
+                                style: GoogleFonts.sora(
+                                    color: Colors.grey, fontSize: 12),
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 66,
+                  ),
+                  Container(
+                    child: Row(
+                      children: [
+                        IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.remove_circle_rounded,
+                              color: Colors.brown,
+                            )),
+                        Text(
+                          ("1"),
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.add_circle_rounded,
+                              color: Colors.brown,
+                            )),
+                      ],
+                    ),
+                  )
+                ],
+              ),
             )
           ],
         ),
