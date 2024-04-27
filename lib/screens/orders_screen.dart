@@ -207,6 +207,38 @@ class _OrdersScreenState extends State<OrdersScreen> {
                     )
                   ],
                 ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Container(
+                height: 56,
+                width: 315,
+                decoration: BoxDecoration(
+                    border: Border.all(),
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.grey),
+                child: Row(
+                  children: [
+                    Image.asset(
+                      "assets/Discount.png",
+                      height: 25,
+                      width: 25,
+                      fit: BoxFit.contain,
+                    ),
+                    Text(
+                      "1 Discount is applied",
+                      style: GoogleFonts.sora(
+                          fontWeight: FontWeight.w600, fontSize: 14),
+                    ),
+                    IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.arrow_forward_ios_rounded,
+                          color: Colors.black,
+                        ))
+                  ],
+                ),
               )
             ],
           ),
