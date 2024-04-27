@@ -242,7 +242,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                                 builder: (context) => const OrdersScreen()));
                       },
                       child: Text(
-                        "Buy Now",
+                        "Order Now",
                         style: GoogleFonts.sora(
                             fontSize: 16, fontWeight: FontWeight.w600),
                       ))
