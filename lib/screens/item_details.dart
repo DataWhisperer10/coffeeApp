@@ -24,7 +24,7 @@ class _ItemDetailsState extends State<ItemDetails> {
       appBar: AppBar(
         leading: IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back_ios_new_rounded,
               color: Colors.black,
             )),

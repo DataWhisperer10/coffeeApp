@@ -1,4 +1,4 @@
-import 'package:coffee/screens/item_details.dart';
+import 'package:coffee/screens/register_screen_1.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -69,7 +69,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                           Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                              builder: ((context) => const ItemDetails()),
+                              builder: ((context) => const RegisterScreen1()),
                             ),
                           );
                         },
