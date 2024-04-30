@@ -3,6 +3,7 @@
 A Flutter APP for a Coffee Shop. To Choose from various types of coffes from the options. And Start your day with amazing freshness in mind. 
 
 #App Funtionality
+
 From the Homescreen choose the type of coffe which suits your day's need.
 Then select the size of the coffe cup as per your demand.
 See the dynamic prize changes on the same screen.
@@ -15,6 +16,7 @@ and Complete your order.
 See the tracking of your delivery partner and choose another Item.
 
 #The Screens
+
 ![1 SplashScreen](https://github.com/DataWhisperer10/coffeeApp/assets/142170612/d40cb657-fb77-4d2e-a3d0-493ea5f91bf4)
 ![2 Onboarding Screen](https://github.com/DataWhisperer10/coffeeApp/assets/142170612/2bc07eef-1c77-407f-9dc2-30eb4192a8ca)
 ![3 ItemDetails](https://github.com/DataWhisperer10/coffeeApp/assets/142170612/b5be1233-d444-4d90-a0d5-96505751f294)
