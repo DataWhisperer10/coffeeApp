@@ -1,3 +1,4 @@
+import 'package:coffee/screens/login_screen.dart';
 import 'package:coffee/screens/register_screen_2.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -106,7 +107,7 @@ class _RegisterScreen1State extends State<RegisterScreen1> {
                     ),
                     Row(
                       children: [
-                        Text(
+                        const Text(
                           "Already have an Account ?   ",
                         ),
                         InkWell(
