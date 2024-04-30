@@ -10,6 +10,13 @@ class ItemDetails extends StatefulWidget {
 }
 
 class _ItemDetailsState extends State<ItemDetails> {
+  List<String> selectedCupSize = [
+    "S",
+    "M",
+    "L",
+  ];
+  List<bool> isCupSizeSelected = List.filled(3, true);
+
   int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
@@ -155,53 +162,84 @@ class _ItemDetailsState extends State<ItemDetails> {
               const SizedBox(
                 height: 12,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Material(
-                    elevation: 5,
-                    borderOnForeground: true,
-                    borderRadius: BorderRadius.circular(15),
-                    child: Container(
-                      child: Center(
-                          child: Text(
-                        "S",
-                        style: GoogleFonts.sora(fontSize: 14),
-                      )),
-                      height: 43,
-                      width: 96,
-                    ),
-                  ),
-                  Material(
-                    elevation: 5,
-                    borderOnForeground: true,
-                    borderRadius: BorderRadius.circular(15),
-                    child: Container(
-                      child: Center(
-                          child: Text(
-                        "M",
-                        style: GoogleFonts.sora(fontSize: 14),
-                      )),
-                      height: 43,
-                      width: 96,
-                    ),
-                  ),
-                  Material(
-                    elevation: 5,
-                    borderOnForeground: true,
-                    borderRadius: BorderRadius.circular(15),
-                    child: Container(
-                      child: Center(
-                          child: Text(
-                        "L",
-                        style: GoogleFonts.sora(fontSize: 14),
-                      )),
-                      height: 43,
-                      width: 96,
-                    ),
-                  )
-                ],
+              Wrap(
+                spacing: 8,
+                runSpacing: 8,
+                children: List.generate(
+                    selectedCupSize.length,
+                    (index) => GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              isCupSizeSelected[index] =
+                                  !isCupSizeSelected[index];
+                            });
+                          },
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 10, vertical: 10),
+                            decoration: BoxDecoration(
+                                color: isCupSizeSelected[index]
+                                    ? Colors.white
+                                    : Color.fromARGB(255, 206, 90, 47),
+                                border: Border.all(),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Text(
+                              selectedCupSize[index],
+                              style: TextStyle(
+                                  color: isCupSizeSelected[index]
+                                      ? Colors.brown
+                                      : Colors.white),
+                            ),
+                          ),
+                        )),
               ),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //   children: [
+              //     Material(
+              //       elevation: 5,
+              //       borderOnForeground: true,
+              //       borderRadius: BorderRadius.circular(15),
+              //       child: Container(
+              //         child: Center(
+              //             child: Text(
+              //           "S",
+              //           style: GoogleFonts.sora(fontSize: 14),
+              //         )),
+              //         height: 43,
+              //         width: 96,
+              //       ),
+              //     ),
+              //     Material(
+              //       elevation: 5,
+              //       borderOnForeground: true,
+              //       borderRadius: BorderRadius.circular(15),
+              //       child: Container(
+              //         child: Center(
+              //             child: Text(
+              //           "M",
+              //           style: GoogleFonts.sora(fontSize: 14),
+              //         )),
+              //         height: 43,
+              //         width: 96,
+              //       ),
+              //     ),
+              //     Material(
+              //       elevation: 5,
+              //       borderOnForeground: true,
+              //       borderRadius: BorderRadius.circular(15),
+              //       child: Container(
+              //         child: Center(
+              //             child: Text(
+              //           "L",
+              //           style: GoogleFonts.sora(fontSize: 14),
+              //         )),
+              //         height: 43,
+              //         width: 96,
+              //       ),
+              //     )
+              //   ],
+              // ),
               const SizedBox(
                 height: 33,
               ),
