@@ -98,7 +98,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                       children: [
                         const Icon(
                           Icons.star_purple500_sharp,
-                          color: Colors.pink,
+                          color: Color.fromARGB(255, 10, 17, 235),
                         ),
                         const SizedBox(
                           width: 5,
@@ -205,53 +205,6 @@ class _ItemDetailsState extends State<ItemDetails> {
                           ),
                         )),
               ),
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //   children: [
-              //     Material(
-              //       elevation: 5,
-              //       borderOnForeground: true,
-              //       borderRadius: BorderRadius.circular(15),
-              //       child: Container(
-              //         child: Center(
-              //             child: Text(
-              //           "S",
-              //           style: GoogleFonts.sora(fontSize: 14),
-              //         )),
-              //         height: 43,
-              //         width: 96,
-              //       ),
-              //     ),
-              //     Material(
-              //       elevation: 5,
-              //       borderOnForeground: true,
-              //       borderRadius: BorderRadius.circular(15),
-              //       child: Container(
-              //         child: Center(
-              //             child: Text(
-              //           "M",
-              //           style: GoogleFonts.sora(fontSize: 14),
-              //         )),
-              //         height: 43,
-              //         width: 96,
-              //       ),
-              //     ),
-              //     Material(
-              //       elevation: 5,
-              //       borderOnForeground: true,
-              //       borderRadius: BorderRadius.circular(15),
-              //       child: Container(
-              //         child: Center(
-              //             child: Text(
-              //           "L",
-              //           style: GoogleFonts.sora(fontSize: 14),
-              //         )),
-              //         height: 43,
-              //         width: 96,
-              //       ),
-              //     )
-              //   ],
-              // ),
               const SizedBox(
                 height: 33,
               ),

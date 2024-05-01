@@ -185,27 +185,25 @@ class _OrdersScreenState extends State<OrdersScreen> {
                       const SizedBox(
                         width: 46,
                       ),
-                      Container(
-                        child: Row(
-                          children: [
-                            IconButton(
-                                onPressed: () {},
-                                icon: Icon(
-                                  Icons.remove_circle_rounded,
-                                  color: Colors.brown,
-                                )),
-                            Text(
-                              ("1"),
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                            IconButton(
-                                onPressed: () {},
-                                icon: Icon(
-                                  Icons.add_circle_rounded,
-                                  color: Colors.brown,
-                                )),
-                          ],
-                        ),
+                      Row(
+                        children: [
+                          IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.remove_circle_rounded,
+                                color: Colors.brown,
+                              )),
+                          const Text(
+                            ("1"),
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.add_circle_rounded,
+                                color: Colors.brown,
+                              )),
+                        ],
                       )
                     ],
                   ),
@@ -273,7 +271,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
                       style: GoogleFonts.sora(fontSize: 14),
                     ),
                     Text(
-                      "\$ 4.9 ",
+                      "\$ 4.90 ",
                       style: GoogleFonts.sora(
                           fontWeight: FontWeight.w600, fontSize: 14),
                     )
@@ -290,7 +288,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
                       style: GoogleFonts.sora(fontSize: 14),
                     ),
                     Text(
-                      "\$ 1.0 ",
+                      "\$ 1.03 ",
                       style: GoogleFonts.sora(
                           fontWeight: FontWeight.w600, fontSize: 14),
                     )
@@ -308,7 +306,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
                       style: GoogleFonts.sora(fontSize: 14),
                     ),
                     Text(
-                      "\$ 5.9 ",
+                      "\$ 5.93 ",
                       style: GoogleFonts.sora(
                           fontWeight: FontWeight.w600, fontSize: 14),
                     )
@@ -331,24 +329,30 @@ class _OrdersScreenState extends State<OrdersScreen> {
                           TextButton(
                               onPressed: () {},
                               child: Container(
+                                  width: 70,
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(10),
                                       color: Colors.brown),
-                                  child: Text(
-                                    "Cash",
-                                    style: GoogleFonts.sora(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.w600),
+                                  child: Center(
+                                    child: Text(
+                                      "Cash",
+                                      style: GoogleFonts.sora(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.w600),
+                                    ),
                                   ))),
                           Container(
+                              width: 70,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 border: Border.all(color: Colors.black26),
                               ),
-                              child: Text(
-                                "\$ 5.53",
-                                style: GoogleFonts.sora(
-                                  color: Colors.black,
+                              child: Center(
+                                child: Text(
+                                  "\$ 5.93",
+                                  style: GoogleFonts.sora(
+                                    color: Colors.black,
+                                  ),
                                 ),
                               ))
                         ],

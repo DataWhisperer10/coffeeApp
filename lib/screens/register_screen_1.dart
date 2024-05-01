@@ -97,13 +97,13 @@ class _RegisterScreen1State extends State<RegisterScreen1> {
                               "Next",
                               style: GoogleFonts.sora(
                                   fontSize: 30,
-                                  fontWeight: FontWeight.w600,
+                                  fontWeight: FontWeight.w400,
                                   color: Colors.white),
                             ),
                           )),
                     ),
                     const SizedBox(
-                      height: 20,
+                      height: 30,
                     ),
                     Row(
                       children: [
@@ -121,7 +121,7 @@ class _RegisterScreen1State extends State<RegisterScreen1> {
                             "Login",
                             style: GoogleFonts.sora(
                                 color: Colors.brown,
-                                fontSize: 20,
+                                fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
                         )

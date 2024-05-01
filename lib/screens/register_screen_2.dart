@@ -86,7 +86,7 @@ class _RegisterScreen2State extends State<RegisterScreen2> {
                       )),
                 ),
                 const SizedBox(
-                  height: 60,
+                  height: 40,
                 ),
                 const Text(
                     "By signing up, you agree to Coffee’s Terms of Service and Privacy Policy.")
