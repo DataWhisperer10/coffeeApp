@@ -1,4 +1,4 @@
-import 'package:coffee/screens/item_details.dart';
+import 'package:coffee/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -82,7 +82,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const ItemDetails()));
+                                  builder: (context) => const HomeScreen()));
                         },
                         child: Center(
                           child: Text(
