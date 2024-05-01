@@ -52,7 +52,7 @@ class _RegisterScreen2State extends State<RegisterScreen2> {
                   height: 40,
                 ),
                 SizedBox(
-                  height: 40,
+                  height: 50,
                   width: double.infinity,
                   child: TextButton(
                       style: ButtonStyle(
@@ -81,7 +81,7 @@ class _RegisterScreen2State extends State<RegisterScreen2> {
                         "Sign Up",
                         style: GoogleFonts.sora(
                             color: Colors.white,
-                            fontSize: 30,
+                            fontSize: 20,
                             fontWeight: FontWeight.w400),
                       )),
                 ),

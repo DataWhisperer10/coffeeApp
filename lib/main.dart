@@ -1,4 +1,4 @@
-import 'package:coffee/screens/register_screen_1.dart';
+import 'package:coffee/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const RegisterScreen1(),
+      home: const SplashScreen(),
     );
   }
 }

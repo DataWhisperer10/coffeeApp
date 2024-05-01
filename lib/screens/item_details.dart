@@ -16,6 +16,7 @@ class _ItemDetailsState extends State<ItemDetails> {
     "L",
   ];
   List<bool> isCupSizeSelected = List.filled(3, true);
+  bool isFavorite = false;
 
   int currentIndex = 0;
   @override
@@ -37,10 +38,18 @@ class _ItemDetailsState extends State<ItemDetails> {
         ),
         actions: [
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+                  isFavorite = !isFavorite;
+                });
+              },
               icon: Icon(
-                Icons.favorite_outline_rounded,
-                color: Colors.black,
+                isFavorite
+                    ? Icons.favorite_rounded
+                    : Icons.favorite_outline_rounded,
+                color: isFavorite
+                    ? Color.fromARGB(255, 230, 112, 151)
+                    : Colors.black,
               ))
         ],
       ),
