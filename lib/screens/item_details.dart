@@ -87,7 +87,10 @@ class _ItemDetailsState extends State<ItemDetails> {
                   children: [
                     Row(
                       children: [
-                        Icon(Icons.star_purple500_sharp),
+                        const Icon(
+                          Icons.star_purple500_sharp,
+                          color: Colors.pink,
+                        ),
                         const SizedBox(
                           width: 5,
                         ),
@@ -163,8 +166,8 @@ class _ItemDetailsState extends State<ItemDetails> {
                 height: 12,
               ),
               Wrap(
-                spacing: 8,
-                runSpacing: 8,
+                spacing: 20,
+                runSpacing: 20,
                 children: List.generate(
                     selectedCupSize.length,
                     (index) => GestureDetector(

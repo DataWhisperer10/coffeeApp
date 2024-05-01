@@ -1,3 +1,4 @@
+import 'package:coffee/screens/item_details.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -68,7 +69,14 @@ class _RegisterScreen2State extends State<RegisterScreen2> {
                           ),
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: ((context) => const ItemDetails()),
+                          ),
+                        );
+                      },
                       child: Text(
                         "Sign Up",
                         style: GoogleFonts.sora(
@@ -81,7 +89,7 @@ class _RegisterScreen2State extends State<RegisterScreen2> {
                   height: 60,
                 ),
                 const Text(
-                    "By signing up, you agree to Photo’s Terms of Service and Privacy Policy.")
+                    "By signing up, you agree to Coffee’s Terms of Service and Privacy Policy.")
               ],
             ),
           ),
