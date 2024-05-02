@@ -101,18 +101,21 @@ class _HomeScreenState extends State<HomeScreen> {
                   color: Colors.brown,
                 ),
               ),
-              const SizedBox(
-                height: 24,
+              // const SizedBox(
+              //   height: 24,
+              // ),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Image.asset(
+                  "assets/Frame.png",
+                  height: 140,
+                  width: 315,
+                  fit: BoxFit.cover,
+                ),
               ),
-              Image.asset(
-                "assets/Frame.png",
-                height: 140,
-                width: 315,
-                fit: BoxFit.cover,
-              ),
-              const SizedBox(
-                height: 20,
-              ),
+              // const SizedBox(
+              //   height: 20,
+              // ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Wrap(
@@ -155,115 +158,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SizedBox(
-                    width: 200,
-                    height: 300,
-                    child: Card(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          Image.asset(
-                            "assets/Cup3.png",
-                            fit: BoxFit.fill,
-                          ),
-                          Text(
-                            "Cappucino",
-                            style: GoogleFonts.sora(
-                                fontWeight: FontWeight.w600, fontSize: 16),
-                          ),
-                          Text(
-                            "with Chocolate",
-                            style: GoogleFonts.sora(fontSize: 12),
-                          ),
-                          const SizedBox(
-                            height: 30,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              SizedBox(
-                                height: 25,
-                                width: 60,
-                                child: Text(
-                                  "\$ 4.53",
-                                  style: GoogleFonts.sora(
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 18),
-                                ),
-                              ),
-                              SizedBox(
-                                  height: 25,
-                                  width: 60,
-                                  child: IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(
-                                        Icons.add_box_rounded,
-                                        color: Color.fromARGB(255, 121, 42, 13),
-                                      )))
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
+                  itemCard1(), //for code readability, used itemcard widget
                   const SizedBox(
                     width: 20,
                   ),
-                  SizedBox(
-                    width: 200,
-                    height: 300,
-                    child: Card(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          Image.asset(
-                            "assets/Cup22.png",
-                            fit: BoxFit.fill,
-                          ),
-                          Text(
-                            "Cappucino",
-                            style: GoogleFonts.sora(
-                                fontWeight: FontWeight.w600, fontSize: 16),
-                          ),
-                          Text(
-                            "with Oat Milk",
-                            style: GoogleFonts.sora(fontSize: 12),
-                          ),
-                          const SizedBox(
-                            height: 30,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              SizedBox(
-                                height: 25,
-                                width: 60,
-                                child: Text(
-                                  "\$ 3.90",
-                                  style: GoogleFonts.sora(
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 18),
-                                ),
-                              ),
-                              SizedBox(
-                                  height: 25,
-                                  width: 60,
-                                  child: IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(
-                                        Icons.add_box_rounded,
-                                        color: Color.fromARGB(255, 121, 42, 13),
-                                      )))
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                  itemCard2(),
                 ],
               ),
               const SizedBox(
@@ -273,119 +172,182 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SizedBox(
-                    width: 200,
-                    height: 300,
-                    child: Card(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          Image.asset(
-                            "assets/Cup3.png",
-                            fit: BoxFit.fill,
-                          ),
-                          Text(
-                            "Cappucino",
-                            style: GoogleFonts.sora(
-                                fontWeight: FontWeight.w600, fontSize: 16),
-                          ),
-                          Text(
-                            "with Chocolate",
-                            style: GoogleFonts.sora(fontSize: 12),
-                          ),
-                          const SizedBox(
-                            height: 30,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              SizedBox(
-                                height: 25,
-                                width: 60,
-                                child: Text(
-                                  "\$ 4.53",
-                                  style: GoogleFonts.sora(
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 18),
-                                ),
-                              ),
-                              SizedBox(
-                                  height: 25,
-                                  width: 60,
-                                  child: IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(
-                                        Icons.add_box_rounded,
-                                        color: Color.fromARGB(255, 121, 42, 13),
-                                      )))
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  SizedBox(
-                    width: 200,
-                    height: 300,
-                    child: Card(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          Image.asset(
-                            "assets/Cup22.png",
-                            fit: BoxFit.fill,
-                          ),
-                          Text(
-                            "Cappucino",
-                            style: GoogleFonts.sora(
-                                fontWeight: FontWeight.w600, fontSize: 16),
-                          ),
-                          Text(
-                            "with Oat Milk",
-                            style: GoogleFonts.sora(fontSize: 12),
-                          ),
-                          const SizedBox(
-                            height: 30,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              SizedBox(
-                                height: 25,
-                                width: 60,
-                                child: Text(
-                                  "\$ 3.90",
-                                  style: GoogleFonts.sora(
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 18),
-                                ),
-                              ),
-                              SizedBox(
-                                  height: 25,
-                                  width: 60,
-                                  child: IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(
-                                        Icons.add_box_rounded,
-                                        color: Color.fromARGB(255, 121, 42, 13),
-                                      )))
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                  itemCard1(),
+                  itemCard2(),
                 ],
               ),
             ],
           ),
+        ),
+      ),
+    );
+  }
+
+  Widget itemCard1() {
+    return SizedBox(
+      width: 200,
+      height: 300,
+      child: Card(
+        child: Stack(
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Image.asset(
+                  "assets/Cup3.png",
+                  fit: BoxFit.fill,
+                ),
+                Text(
+                  "Cappucino",
+                  style: GoogleFonts.sora(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 16,
+                  ),
+                ),
+                Text(
+                  "with Chocolate",
+                  style: GoogleFonts.sora(
+                    fontSize: 12,
+                  ),
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      height: 25,
+                      width: 60,
+                      child: Text(
+                        "\$ 4.53",
+                        style: GoogleFonts.sora(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 18,
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 25,
+                      width: 60,
+                      child: IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.add_box_rounded,
+                          color: Color.fromARGB(255, 121, 42, 13),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            const Positioned(
+              top: 10,
+              left: 10,
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.star,
+                    color: Color.fromARGB(255, 224, 203, 12),
+                  ),
+                  SizedBox(width: 5),
+                  Text(
+                    "4.5",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, color: Colors.white),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget itemCard2() {
+    return SizedBox(
+      width: 200,
+      height: 300,
+      child: Card(
+        child: Stack(
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Image.asset(
+                  "assets/Cup22.png",
+                  fit: BoxFit.fill,
+                ),
+                Text(
+                  "Cappucino",
+                  style: GoogleFonts.sora(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 16,
+                  ),
+                ),
+                Text(
+                  "with Oat Milk",
+                  style: GoogleFonts.sora(
+                    fontSize: 12,
+                  ),
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      height: 25,
+                      width: 60,
+                      child: Text(
+                        "\$ 5.93",
+                        style: GoogleFonts.sora(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 18,
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 25,
+                      width: 60,
+                      child: IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.add_box_rounded,
+                          color: Color.fromARGB(255, 121, 42, 13),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            const Positioned(
+              top: 10,
+              left: 10,
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.star,
+                    color: Color.fromARGB(255, 224, 203, 12),
+                  ),
+                  SizedBox(width: 5),
+                  Text(
+                    "4.9",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, color: Colors.white),
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
