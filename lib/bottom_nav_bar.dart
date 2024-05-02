@@ -1,3 +1,7 @@
+import 'package:coffee/screens/cart_screen.dart';
+import 'package:coffee/screens/favorite_screen.dart';
+import 'package:coffee/screens/home_screen.dart';
+import 'package:coffee/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -17,7 +21,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
             height: 60,
             width: double.infinity,
             color: Colors.black,
-            child: TabBar(
+            child: const TabBar(
               tabs: [
                 Tab(
                   text: "Home",
@@ -41,6 +45,12 @@ class _BottomNavBarState extends State<BottomNavBar> {
               indicatorColor: Colors.brown,
             ),
           ),
+          body: const TabBarView(children: [
+            HomeScreen(),
+            FavoriteScreen(),
+            CartScreen(),
+            ProfileScreen()
+          ]),
         ));
   }
 }

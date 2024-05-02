@@ -1,4 +1,4 @@
-import 'package:coffee/screens/home_screen.dart';
+import 'package:coffee/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -73,7 +73,7 @@ class _RegisterScreen2State extends State<RegisterScreen2> {
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                            builder: ((context) => const HomeScreen()),
+                            builder: ((context) => const BottomNavBar()),
                           ),
                         );
                       },
