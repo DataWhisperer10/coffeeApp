@@ -13,12 +13,17 @@ class _DeliveryScreenState extends State<DeliveryScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(
-          Icons.arrow_back_ios_new_rounded,
-          color: Colors.black,
-        ),
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(
+              Icons.arrow_back_ios_new_rounded,
+              color: Colors.black,
+            )),
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.location_on_rounded))
+          IconButton(
+              onPressed: () {}, icon: const Icon(Icons.location_on_rounded))
         ],
       ),
       body: Padding(
