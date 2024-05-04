@@ -12,16 +12,14 @@ class OnBoardingScreen extends StatefulWidget {
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height;
-    double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: Container(
+      body: SizedBox(
         height: double.infinity,
         width: double.infinity,
         child: Stack(
           fit: StackFit.expand,
           children: [
-            Container(
+            SizedBox(
               height: double.infinity,
               width: double.infinity,
               child: Image.asset(

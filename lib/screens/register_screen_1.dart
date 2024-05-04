@@ -67,16 +67,16 @@ class _RegisterScreen1State extends State<RegisterScreen1> {
                     const SizedBox(
                       height: 40,
                     ),
-                    Container(
+                    SizedBox(
                       height: 40,
                       width: double.infinity,
                       child: ElevatedButton(
                           style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all<Color>(
-                                Color.fromARGB(255, 125, 38,
+                                const Color.fromARGB(255, 125, 38,
                                     7)), // Set brown background color
                             maximumSize: MaterialStateProperty.all<Size>(
-                                Size.fromWidth(double.infinity)),
+                                const Size.fromWidth(double.infinity)),
                             shape: MaterialStateProperty.all<
                                 RoundedRectangleBorder>(
                               RoundedRectangleBorder(

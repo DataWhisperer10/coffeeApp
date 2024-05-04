@@ -216,7 +216,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget itemCard1() {
     return SizedBox(
-      width: 180,
+      width: 170,
       height: 300,
       child: Card(
         child: Stack(
@@ -301,7 +301,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget itemCard2() {
     return SizedBox(
-      width: 200,
+      width: 170,
       height: 300,
       child: Card(
         child: Stack(
