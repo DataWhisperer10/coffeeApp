@@ -83,13 +83,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 20),
-                      child: Container(
+                      child: SizedBox(
                         height: 44,
                         width: 44,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
                           child: Image.asset(
-                            "assets/Splash.png",
+                            "assets/splash.jpg",
                             fit: BoxFit.fill,
                           ),
                         ),

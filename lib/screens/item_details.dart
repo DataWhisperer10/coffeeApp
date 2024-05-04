@@ -229,28 +229,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                       )
                     ],
                   ),
-                  TextButton(
-                      style: ButtonStyle(
-                        padding: MaterialStateProperty.all(
-                          EdgeInsets.symmetric(
-                              vertical: 20.0, horizontal: 54.0),
-                        ),
-                        backgroundColor: MaterialStateProperty.all<Color>(
-                            const Color.fromARGB(255, 177, 119, 98)),
-                        foregroundColor:
-                            MaterialStateProperty.all<Color>(Colors.white),
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const OrdersScreen()));
-                      },
-                      child: Text(
-                        "Order Now",
-                        style: GoogleFonts.sora(
-                            fontSize: 16, fontWeight: FontWeight.w600),
-                      ))
+                  textButton(),
                 ],
               )
             ],
@@ -258,5 +237,25 @@ class _ItemDetailsState extends State<ItemDetails> {
         ),
       ),
     );
+  }
+
+  Widget textButton() {
+    return TextButton(
+        style: ButtonStyle(
+          padding: MaterialStateProperty.all(
+            EdgeInsets.symmetric(vertical: 20.0, horizontal: 54.0),
+          ),
+          backgroundColor: MaterialStateProperty.all<Color>(
+              const Color.fromARGB(255, 177, 119, 98)),
+          foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+        ),
+        onPressed: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const OrdersScreen()));
+        },
+        child: Text(
+          "Order Now",
+          style: GoogleFonts.sora(fontSize: 16, fontWeight: FontWeight.w600),
+        ));
   }
 }

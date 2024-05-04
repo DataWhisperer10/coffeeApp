@@ -34,9 +34,13 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               left: 30,
               right: 30,
               child: Container(
-                width: MediaQuery.of(context).size.width / 6,
+                width: MediaQuery.of(context).size.width / 5,
                 height: MediaQuery.of(context).size.height / 3.3,
-                decoration: const BoxDecoration(color: Colors.black),
+                decoration: const BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(10),
+                        topRight: Radius.circular(10))),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
