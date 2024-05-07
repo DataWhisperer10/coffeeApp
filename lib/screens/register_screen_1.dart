@@ -70,41 +70,7 @@ class _RegisterScreen1State extends State<RegisterScreen1> {
                     const SizedBox(
                       height: 40,
                     ),
-                    SizedBox(
-                      height: 50,
-                      width: double.infinity,
-                      child: ElevatedButton(
-                          style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all<Color>(
-                                const Color.fromARGB(255, 125, 38,
-                                    7)), // Set brown background color
-                            maximumSize: MaterialStateProperty.all<Size>(
-                                const Size.fromWidth(double.infinity)),
-                            shape: MaterialStateProperty.all<
-                                RoundedRectangleBorder>(
-                              RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(
-                                    10.0), // Add optional rounded corners
-                              ),
-                            ),
-                          ),
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const RegisterScreen2()));
-                          },
-                          child: Center(
-                            child: Text(
-                              "Next",
-                              style: GoogleFonts.sora(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white),
-                            ),
-                          )),
-                    ),
+                    commonButton(),
                     const SizedBox(
                       height: 30,
                     ),
@@ -137,6 +103,42 @@ class _RegisterScreen1State extends State<RegisterScreen1> {
           ),
         ),
       ),
+    );
+  }
+
+  Widget commonButton() {
+    return SizedBox(
+      height: 50,
+      width: double.infinity,
+      child: ElevatedButton(
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all<Color>(
+                const Color.fromARGB(
+                    255, 125, 38, 7)), // Set brown background color
+            maximumSize: MaterialStateProperty.all<Size>(
+                const Size.fromWidth(double.infinity)),
+            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+              RoundedRectangleBorder(
+                borderRadius:
+                    BorderRadius.circular(10.0), // Add optional rounded corners
+              ),
+            ),
+          ),
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const RegisterScreen2()));
+          },
+          child: Center(
+            child: Text(
+              "Next",
+              style: GoogleFonts.sora(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.white),
+            ),
+          )),
     );
   }
 }

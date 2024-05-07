@@ -20,7 +20,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           bottomNavigationBar: Container(
             height: 60,
             width: double.infinity,
-            color: Colors.black,
+            color: Color.fromARGB(255, 243, 170, 211),
             child: const TabBar(
               tabs: [
                 Tab(

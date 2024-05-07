@@ -1,3 +1,4 @@
+import 'package:coffee/bottom_nav_bar.dart';
 import 'package:coffee/screens/orders_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -25,7 +26,10 @@ class _CartScreenState extends State<CartScreen> {
       appBar: AppBar(
         leading: IconButton(
             onPressed: () {
-              Navigator.pop(context);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const BottomNavBar()));
             },
             icon: const Icon(
               Icons.arrow_back_ios_new_rounded,
@@ -50,7 +54,7 @@ class _CartScreenState extends State<CartScreen> {
                     ? Icons.favorite_rounded
                     : Icons.favorite_outline_rounded,
                 color: isFavorite
-                    ? Color.fromARGB(255, 230, 112, 151)
+                    ? const Color.fromARGB(255, 230, 112, 151)
                     : Colors.black,
               ))
         ],
@@ -92,6 +96,7 @@ class _CartScreenState extends State<CartScreen> {
                 height: 16,
               ),
               Material(
+                borderRadius: BorderRadius.circular(8),
                 elevation: 5,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -100,7 +105,7 @@ class _CartScreenState extends State<CartScreen> {
                       children: [
                         const Icon(
                           Icons.star_purple500_sharp,
-                          color: Color.fromARGB(255, 10, 17, 235),
+                          color: Color.fromARGB(255, 227, 241, 29),
                         ),
                         const SizedBox(
                           width: 5,
@@ -125,8 +130,8 @@ class _CartScreenState extends State<CartScreen> {
                             elevation: 4,
                             child: Image.asset(
                               "assets/milk.png",
-                              height: 44,
-                              width: 44,
+                              height: 40,
+                              width: 40,
                             ),
                           ),
                         ),

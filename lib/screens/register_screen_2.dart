@@ -51,40 +51,7 @@ class _RegisterScreen2State extends State<RegisterScreen2> {
                 const SizedBox(
                   height: 40,
                 ),
-                SizedBox(
-                  height: 50,
-                  width: double.infinity,
-                  child: TextButton(
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(
-                            const Color.fromARGB(
-                                255, 125, 38, 7)), // Set brown background color
-                        maximumSize: MaterialStateProperty.all<Size>(
-                            const Size.fromWidth(double.infinity)),
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(
-                                10.0), // Add optional rounded corners
-                          ),
-                        ),
-                      ),
-                      onPressed: () {
-                        Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                            builder: ((context) => const BottomNavBar()),
-                          ),
-                        );
-                      },
-                      child: Text(
-                        "Sign Up",
-                        style: GoogleFonts.sora(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w400),
-                      )),
-                ),
+                signUpButton(),
                 const SizedBox(
                   height: 40,
                 ),
@@ -95,6 +62,40 @@ class _RegisterScreen2State extends State<RegisterScreen2> {
           ),
         ),
       ),
+    );
+  }
+
+  Widget signUpButton() {
+    return SizedBox(
+      height: 50,
+      width: double.infinity,
+      child: TextButton(
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all<Color>(
+                const Color.fromARGB(
+                    255, 125, 38, 7)), // Set brown background color
+            maximumSize: MaterialStateProperty.all<Size>(
+                const Size.fromWidth(double.infinity)),
+            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+              RoundedRectangleBorder(
+                borderRadius:
+                    BorderRadius.circular(10.0), // Add optional rounded corners
+              ),
+            ),
+          ),
+          onPressed: () {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                builder: ((context) => const BottomNavBar()),
+              ),
+            );
+          },
+          child: Text(
+            "Sign Up",
+            style: GoogleFonts.sora(
+                color: Colors.white, fontSize: 20, fontWeight: FontWeight.w400),
+          )),
     );
   }
 }

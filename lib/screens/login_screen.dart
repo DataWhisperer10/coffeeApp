@@ -27,7 +27,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(
-                    height: 50,
+                    height: 110,
                   ),
                   Text(
                     "Log In",
@@ -60,16 +60,16 @@ class _LoginScreenState extends State<LoginScreen> {
                   const SizedBox(
                     height: 40,
                   ),
-                  Container(
-                    height: 40,
+                  SizedBox(
+                    height: 50,
                     width: double.infinity,
                     child: ElevatedButton(
                         style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all<Color>(
-                              Color.fromARGB(255, 125, 38,
+                              const Color.fromARGB(255, 125, 38,
                                   7)), // Set brown background color
                           maximumSize: MaterialStateProperty.all<Size>(
-                              Size.fromWidth(double.infinity)),
+                              const Size.fromWidth(double.infinity)),
                           shape:
                               MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
@@ -88,8 +88,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: Text(
                             "Log In",
                             style: GoogleFonts.sora(
-                                fontSize: 30,
-                                fontWeight: FontWeight.w600,
+                                fontSize: 20,
+                                fontWeight: FontWeight.w400,
                                 color: Colors.white),
                           ),
                         )),
