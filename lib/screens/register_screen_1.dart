@@ -22,84 +22,88 @@ class _RegisterScreen1State extends State<RegisterScreen1> {
           horizontal: 20.0,
         ),
         child: SafeArea(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(
-                height: 50,
-              ),
-              Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const SizedBox(
-                      height: 50,
-                    ),
-                    Text(
-                      "Register",
-                      textAlign: TextAlign.left,
-                      style: GoogleFonts.sora(
-                          fontSize: 30, fontWeight: FontWeight.bold),
-                    ),
-                    const SizedBox(
-                      height: 50,
-                    ),
-                    TextField(
-                      controller: emailController,
-                      decoration: const InputDecoration(
-                          border: OutlineInputBorder(),
-                          labelText: "Email",
-                          hintText: "example@example.com"),
-                    ),
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    TextField(
-                      obscureText: true,
-                      controller: passwordController,
-                      decoration: const InputDecoration(
-                          border: OutlineInputBorder(),
-                          labelText: "Password",
-                          hintText: "Abc@123d",
-                          suffixIcon: Icon(
-                            Icons.remove_red_eye_rounded,
-                          )),
-                    ),
-                    const SizedBox(
-                      height: 40,
-                    ),
-                    commonButton(),
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    Row(
-                      children: [
-                        const Text(
-                          "Already have an Account ?   ",
-                        ),
-                        InkWell(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const LoginScreen()));
-                          },
-                          child: Text(
-                            "Login",
-                            style: GoogleFonts.sora(
-                                color: Colors.brown,
-                                fontSize: 18,
-                                fontWeight: FontWeight.w600),
-                          ),
-                        )
-                      ],
-                    )
-                  ],
+          child: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(
+                  height: 50,
                 ),
-              ),
-            ],
+                Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(
+                        height: 50,
+                      ),
+                      Text(
+                        "Register",
+                        textAlign: TextAlign.left,
+                        style: GoogleFonts.sora(
+                            fontSize: 30, fontWeight: FontWeight.bold),
+                      ),
+                      const SizedBox(
+                        height: 50,
+                      ),
+                      TextField(
+                        controller: emailController,
+                        decoration: const InputDecoration(
+                            border: OutlineInputBorder(),
+                            labelText: "Email",
+                            hintText: "example@example.com"),
+                      ),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      TextField(
+                        obscureText: true,
+                        controller: passwordController,
+                        decoration: const InputDecoration(
+                            border: OutlineInputBorder(),
+                            labelText: "Password",
+                            hintText: "Abc@123d",
+                            suffixIcon: Icon(
+                              Icons.remove_red_eye_rounded,
+                            )),
+                      ),
+                      const SizedBox(
+                        height: 40,
+                      ),
+                      commonButton(),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      Row(
+                        children: [
+                          const Text(
+                            "Already have an Account ?   ",
+                          ),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const LoginScreen()));
+                            },
+                            child: Text(
+                              "Login",
+                              style: GoogleFonts.sora(
+                                  color: Colors.brown,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

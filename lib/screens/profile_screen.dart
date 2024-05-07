@@ -73,7 +73,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     child: Column(
                       children: [
                         Text(
-                          "Get a FREE COFFE",
+                          "Get a FREE COFFEE",
                           style: GoogleFonts.sora(
                               color: Colors.black, fontSize: 14),
                         ),

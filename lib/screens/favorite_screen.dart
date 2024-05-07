@@ -80,8 +80,8 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                       ],
                     ),
                     Positioned(
-                        top: 20,
-                        right: 20,
+                        top: 5,
+                        right: 5,
                         child: IconButton(
                             onPressed: () {
                               setState(() {

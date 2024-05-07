@@ -27,37 +27,40 @@ class _RegisterScreen2State extends State<RegisterScreen2> {
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.all(10.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(
-                  height: 50,
-                ),
-                Text(
-                  "Register",
-                  style: GoogleFonts.sora(
-                      fontSize: 30, fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(
-                  height: 50,
-                ),
-                const TextField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      hintText: "the_coffee_lover",
-                      labelText: "User Name"),
-                ),
-                const SizedBox(
-                  height: 40,
-                ),
-                signUpButton(),
-                const SizedBox(
-                  height: 40,
-                ),
-                const Text(
-                    "By signing up, you agree to Coffee’s Terms of Service and Privacy Policy.")
-              ],
+            child: SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  Text(
+                    "Register",
+                    style: GoogleFonts.sora(
+                        fontSize: 30, fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  const TextField(
+                    decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        hintText: "the_coffee_lover",
+                        labelText: "User Name"),
+                  ),
+                  const SizedBox(
+                    height: 40,
+                  ),
+                  signUpButton(),
+                  const SizedBox(
+                    height: 40,
+                  ),
+                  const Text(
+                      "By signing up, you agree to Coffee’s Terms of Service and Privacy Policy.")
+                ],
+              ),
             ),
           ),
         ),
@@ -84,12 +87,12 @@ class _RegisterScreen2State extends State<RegisterScreen2> {
             ),
           ),
           onPressed: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(
-                builder: ((context) => const BottomNavBar()),
-              ),
-            );
+            Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(
+                  builder: ((context) => const BottomNavBar()),
+                ),
+                (route) => false);
           },
           child: Text(
             "Sign Up",

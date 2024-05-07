@@ -104,19 +104,15 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Colors.brown,
                   ),
                 ),
-                // const SizedBox(
-                //   height: 24,
-                // ),
                 Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Image.asset(
                     "assets/Frame.png",
                     height: 140,
-                    width: 315,
-                    fit: BoxFit.cover,
+                    width: double.infinity,
+                    fit: BoxFit.fill,
                   ),
                 ),
-
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Wrap(

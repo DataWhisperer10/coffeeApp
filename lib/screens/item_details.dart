@@ -15,6 +15,11 @@ class _ItemDetailsState extends State<ItemDetails> {
     "M",
     "L",
   ];
+  Map<String, double> cupSizes = {
+    "S": 6.90,
+    "M": 8.40,
+    "L": 10.20,
+  };
   List<bool> isCupSizeSelected = List.filled(3, false);
   bool isFavorite = false;
 

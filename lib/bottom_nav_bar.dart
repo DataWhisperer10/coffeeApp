@@ -29,7 +29,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                 ),
                 Tab(
                   text: "Favorite",
-                  icon: Icon(Icons.favorite_border_rounded),
+                  icon: Icon(Icons.favorite_rounded),
                 ),
                 Tab(
                   text: "Cart",
