@@ -26,6 +26,9 @@ class _RegisterScreen1State extends State<RegisterScreen1> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const SizedBox(
+                height: 50,
+              ),
               Container(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -68,7 +71,7 @@ class _RegisterScreen1State extends State<RegisterScreen1> {
                       height: 40,
                     ),
                     SizedBox(
-                      height: 40,
+                      height: 50,
                       width: double.infinity,
                       child: ElevatedButton(
                           style: ButtonStyle(
@@ -96,7 +99,7 @@ class _RegisterScreen1State extends State<RegisterScreen1> {
                             child: Text(
                               "Next",
                               style: GoogleFonts.sora(
-                                  fontSize: 30,
+                                  fontSize: 20,
                                   fontWeight: FontWeight.w400,
                                   color: Colors.white),
                             ),
