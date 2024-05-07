@@ -151,8 +151,6 @@ class _CartScreenState extends State<CartScreen> {
                         )
                       ],
                     )
-
-                    // ),
                   ],
                 ),
               ),
@@ -199,7 +197,7 @@ class _CartScreenState extends State<CartScreen> {
                             decoration: BoxDecoration(
                                 color: isCupSizeSelected[index]
                                     ? Colors.white
-                                    : Color.fromARGB(255, 206, 90, 47),
+                                    : const Color.fromARGB(255, 206, 90, 47),
                                 border: Border.all(),
                                 borderRadius: BorderRadius.circular(10)),
                             child: Text(
@@ -249,7 +247,7 @@ class _CartScreenState extends State<CartScreen> {
     return TextButton(
         style: ButtonStyle(
           padding: MaterialStateProperty.all(
-            EdgeInsets.symmetric(vertical: 20.0, horizontal: 54.0),
+            const EdgeInsets.symmetric(vertical: 20.0, horizontal: 54.0),
           ),
           backgroundColor: MaterialStateProperty.all<Color>(
               const Color.fromARGB(255, 177, 119, 98)),

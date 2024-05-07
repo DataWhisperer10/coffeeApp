@@ -1,4 +1,5 @@
 import 'package:coffee/screens/delivery_screen.dart';
+import 'package:coffee/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -10,6 +11,7 @@ class OrdersScreen extends StatefulWidget {
 }
 
 class _OrdersScreenState extends State<OrdersScreen> {
+  int quantity = 1;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -32,7 +34,10 @@ class _OrdersScreenState extends State<OrdersScreen> {
           ),
           actions: [
             IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => ProfileScreen()));
+                },
                 icon: const Icon(
                   Icons.person_4,
                   color: Colors.brown,
@@ -188,17 +193,27 @@ class _OrdersScreenState extends State<OrdersScreen> {
                       Row(
                         children: [
                           IconButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                setState(() {
+                                  if (quantity > 1) {
+                                    quantity--;
+                                  }
+                                });
+                              },
                               icon: const Icon(
                                 Icons.remove_circle_rounded,
                                 color: Colors.brown,
                               )),
-                          const Text(
-                            ("1"),
-                            style: TextStyle(fontWeight: FontWeight.bold),
+                          Text(
+                            quantity.toString(), // Display quantity
+                            style: const TextStyle(fontWeight: FontWeight.bold),
                           ),
                           IconButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                setState(() {
+                                  quantity++; // Increase quantity by 1
+                                });
+                              },
                               icon: const Icon(
                                 Icons.add_circle_rounded,
                                 color: Colors.brown,

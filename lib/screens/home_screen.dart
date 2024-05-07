@@ -116,9 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     fit: BoxFit.cover,
                   ),
                 ),
-                // const SizedBox(
-                //   height: 20,
-                // ),
+
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Wrap(
@@ -219,6 +217,7 @@ class _HomeScreenState extends State<HomeScreen> {
       width: 170,
       height: 300,
       child: Card(
+        color: Color.fromARGB(255, 237, 175, 152),
         child: Stack(
           children: [
             Column(
@@ -304,6 +303,7 @@ class _HomeScreenState extends State<HomeScreen> {
       width: 170,
       height: 300,
       child: Card(
+        color: const Color.fromARGB(255, 237, 175, 152),
         child: Stack(
           children: [
             Column(

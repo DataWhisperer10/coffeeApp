@@ -29,7 +29,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
             )),
         title: Center(
           child: Text(
-            "Details",
+            "Favorites",
             style: GoogleFonts.sora(
                 fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black),
           ),
@@ -63,7 +63,17 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                             children: [
                               Text('Cold Coffee'),
                               SizedBox(height: 4),
-                              Text('Ratings: 4.5'),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Icon(
+                                    Icons.star,
+                                    color: Color.fromARGB(255, 224, 203, 12),
+                                  ),
+                                  SizedBox(height: 4),
+                                  Text('4.9')
+                                ],
+                              ),
                             ],
                           ),
                         ),
@@ -87,31 +97,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                                   : Colors.white,
                             )))
                   ],
-                )
-
-                //  Column(
-                //   crossAxisAlignment: CrossAxisAlignment.start,
-                //   children: [
-                //     Image.asset(
-                //       'assets/Cup3.png', // Replace with your image path
-                //       height: 150,
-                //       width: double.infinity,
-                //       fit: BoxFit.cover,
-                //     ),
-                //     Padding(
-                //       padding: EdgeInsets.all(8),
-                //       child: Column(
-                //         crossAxisAlignment: CrossAxisAlignment.start,
-                //         children: [
-                //           Text('Image $index'),
-                //           SizedBox(height: 4),
-                //           Text('Ratings: 4.5'), // Replace with your ratings data
-                //         ],
-                //       ),
-                //     ),
-                //   ],
-                // ),
-                );
+                ));
           }),
         ),
       ),
